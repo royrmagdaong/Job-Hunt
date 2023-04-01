@@ -1,26 +1,38 @@
 import styles from '@/styles/Job.module.css'
 import Image from 'next/image'
 
-const Job = () => {
+const Job = (props) => {
+    const highlights = [];
+
+    for(let i = 0; i<props.job['job-highlights'].length;i++){
+        if(i<=2){
+            highlights.push(
+                <li key={i}>{props.job['job-highlights'][i]}</li>
+            )
+        }else{
+            break;
+        }
+    }
+
+    const viewJob = () => {
+        props.viewJob(props.job);
+    }
+
     return (
-        <div className={styles['card']}>
+        <div className={`${styles['card']} ${props.activeCard===props.job.id?styles['selected-card']:''}`} onClick={viewJob}>
             <div className={styles['logo']}>
                 <Image
-                    src="/company-a.jpg"
+                    src={`/${props.job.logo}`}
                     alt="Company Logo"
                     width={80}
                     height={50}
                 />
             </div>
-            <div className={styles['job-title']}>Job Title</div>
-            <div className={styles['company-name']}>Company Name</div>
-            <div className={styles['location']}>Location</div>
-            <div className={styles['salary']}>25,000.00</div>
-            <ul >
-                <li className={styles['job-highlights']}>highlight 1</li>
-                <li className={styles['job-highlights']}>highlight 2</li>
-                <li className={styles['job-highlights']}>highlight 3</li>
-            </ul>
+            <div className={styles['job-title']}>{props.job['job-title']}</div>
+            <div className={styles['company-name']}>{props.job['company-name']}</div>
+            <div className={styles['location']}>{props.job['location']}</div>
+            <div className={styles['salary']}>{props.job['salary']}</div>
+            <ul>{highlights}</ul>
         </div>
     );
 }

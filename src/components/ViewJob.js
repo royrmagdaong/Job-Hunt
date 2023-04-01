@@ -1,37 +1,35 @@
 import styles from '@/styles/ViewJob.module.css'
 import Image from 'next/image'
 
-const ViewJob = () => {
+const ViewJob = ({job}) => {
     return (
         <div className={styles['container']}>
             <div className={styles['logo']}>
                 <Image
-                    src="/company-a.jpg"
+                    src={`/${job['logo']}`}
                     alt="Company Logo"
-                    width={80}
-                    height={50}
+                    width={160}
+                    height={120}
                 />
             </div>
-            <div className={styles['job-title']}>Job Title</div>
-            <div className={styles['company-name']}>Company Name</div>
-            <div className={styles['location']}>Location</div>
-            <div className={styles['salary']}>25,000.00</div>
+            <div className={styles['job-title']}>{job['job-title']}</div>
+            <div className={styles['company-name']}>{job['company-name']}</div>
+            <div className={styles['location']}>{job['location']}</div>
+            <div className={styles['salary']}>{job['salary']}</div>
             <ul>
-                <li className={styles['job-highlights']}>highlight 1</li>
-                <li className={styles['job-highlights']}>highlight 2</li>
-                <li className={styles['job-highlights']}>highlight 3</li>
-                <li className={styles['job-highlights']}>highlight 3</li>
-                <li className={styles['job-highlights']}>highlight 3</li>
-                <li className={styles['job-highlights']}>highlight 3</li>
+                {
+                    job['job-highlights'].map(highlight=>(
+                        <li className={styles['job-highlights']} key={highlight}>{highlight}</li>
+                    ))
+                }
             </ul>
             <div className={styles['job-description']}>
                 <h4>Job Description</h4>
-                <p>Turpis felis ac proin voluptate eligendi laboriosam blanditiis ultricies magna posuere dui dolore maxime dolorum! Sint commodi ex nisl lobortis non facilisis. Vulputate nesciunt! Accusamus aptent sapiente turpis dui per hac sequi minim vel error perspiciatis rem varius tempore aspernatur aliquam nihil? Tenetur provident? Donec risus! Officia aliqua rutrum placeat. Deleniti cupiditate per porro. Non odio volutpat tellus metus turpis, cubilia imperdiet aliquip proident, quidem natoque quas viverra exercitationem dapibus, blanditiis eget! Blanditiis consequuntur vitae sollicitudin animi dolorum posuere inventore nibh. Rerum tristique delectus, nemo leo deleniti blandit nulla rhoncus, ullamcorper sociis taciti animi ducimus euismod, eiusmod similique, ullam aut.</p>
+                <p>{job['job-description']}</p>
             </div>
             <div className={styles['company-info']}>
-                <h4>Who we are</h4>
-                <p>Turpis felis ac proin voluptate eligendi laboriosam blanditiis ultricies magna posuere dui dolore maxime dolorum! Sint commodi ex nisl lobortis non facilisis. Vulputate nesciunt! Accusamus aptent sapiente turpis dui per hac sequi minim vel error perspiciatis rem varius tempore aspernatur aliquam nihil? Tenetur provident? Donec risus! Officia aliqua rutrum placeat. Deleniti cupiditate per porro. Non odio volutpat tellus metus turpis, cubilia imperdiet aliquip proident, quidem natoque quas viverra exercitationem dapibus, blanditiis eget! Blanditiis consequuntur vitae sollicitudin animi dolorum posuere inventore nibh. Rerum tristique delectus, nemo leo deleniti blandit nulla rhoncus, ullamcorper sociis taciti animi ducimus euismod, eiusmod similique, ullam aut.</p>
-                <p>Turpis felis ac proin voluptate eligendi laboriosam blanditiis ultricies magna posuere dui dolore maxime dolorum! Sint commodi ex nisl lobortis non facilisis. Vulputate nesciunt! Accusamus aptent sapiente turpis dui per hac sequi minim vel error perspiciatis rem varius tempore aspernatur aliquam nihil? Tenetur provident? Donec risus! Officia aliqua rutrum placeat. Deleniti cupiditate per porro. Non odio volutpat tellus metus turpis, cubilia imperdiet aliquip proident, quidem natoque quas viverra exercitationem dapibus, blanditiis eget! Blanditiis consequuntur vitae sollicitudin animi dolorum posuere inventore nibh. Rerum tristique delectus, nemo leo deleniti blandit nulla rhoncus, ullamcorper sociis taciti animi ducimus euismod, eiusmod similique, ullam aut.</p>
+                <h4>Company Info</h4>
+                <p>{job['company-info']}</p>
             </div>
         </div>
     );

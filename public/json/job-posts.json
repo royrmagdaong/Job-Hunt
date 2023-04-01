@@ -1,0 +1,85 @@
+{
+    "jobPosts": [
+      {
+        "id": 1,
+        "user-id": 3,
+        "company-name": "Company name a",
+        "email": "companya@example.com",
+        "logo": "company-a.jpg",
+        "location": "Taguig City",
+        "salary": "25,000.00",
+        "job-title": "Job title 1",
+        "job-highlights": [
+          "Apply Onsite and Be Processed from Initial to Final Interview!",
+          "HMO for you and your qualified dependents",
+          "Career Growth Opportunities | Life Insurance | Amazing Benefits",
+          "Annual salary increase",
+          "Opportunity for promotion"
+        ],
+        "job-description": "The position is primarily responsible for providing clerical and administrative support to Cebuana Lhuillier branches. Handles branch transactions - remittance, pawning, insurance and other non-pawnshop products.  Qualifications:",
+        "company-info": "The P.J. Lhuillier Group of Companies is composed of various companies ranging from its flagship business of pawn brokering  to local and international remittance, micro-insurance, rural banking, hotel and restaurant management, jewelry and sports accessory retail, information technology, real estate, professional management, and corporate social responsibility.",
+        "keywords": ["company a","technical support","engineering"],
+        "specialization": "Engineering"
+      },
+      {
+        "id": 2,
+        "user-id": 3,
+        "company-name": "Company name b",
+        "email": "companyb@example.com",
+        "logo": "company-b.jpg",
+        "location": "Makati City",
+        "salary": "55,000.00",
+        "job-title": "Job title 2",
+        "job-highlights": [
+          "Get to work with a small and intimate group of people.",
+          "Work is more visible and employees get noticed faster.",
+          "Employees get to wear many hats and gain different skill sets.",
+          "Fun & engaging company-sponsored events",
+          "HMO with dependent & life insurance"
+        ],
+        "job-description": "Ensure all customers receive the highest level of service by answering inquiries and resolving issues, primarily through email and chat. Perform back-office tasks to complete customer concerns and requests with attention to detail and efficiency. Collaborate and work effectively with other team members to achieve the best results for all customer-related requests.",
+        "company-info": "Transec is a BPO company headquartered in Ortigas, Metro Manila. We specialize on high value small to medium sized businesses both local and international. Our growing company has been lucky enough to work with a variety of clients through our outsourcing solutions in customer service, technical support, data entry and processing, quality assurance, and more back office functions.",
+        "keywords": ["company b","finance", "marketing"],
+        "specialization": "Sales"
+      },
+      {
+        "id": 3,
+        "user-id": 3,
+        "company-name": "Company name c",
+        "email": "companyc@example.com",
+        "logo": "company-c.jpg",
+        "location": "Quezon City",
+        "salary": "45,000.00",
+        "job-title": "Job title 3",
+        "job-highlights": [
+          "Outstanding career growth & development opportunities",
+          "Competitive salary & work benefit packages",
+          "Passionate, energetic, & innovative work culture"
+        ],
+        "job-description": "The Teller is responsible for fast and accurate processing of over the counter customer transactions such as checks, deposits, loan payments, and withdrawals.",
+        "company-info": "Philippine Business Bank (PBB) was incorporated on January 28, 1997 as Total Savings Bank and was granted the authority to operate as a thrift bank by the Monetary Board (MB) No.29 dated January 8, 1997. On December 16, 1997, the Securities and Exchange Commission approved the change in its corporate name to the present one. PBB is a savings bank which focuses on corporate and small and medium enterprise (SME) markets. The Company provides close to a full range of banking services and products including cash management, retail and corporate lending, deposit products, international trade finance, treasury and trust products.",
+        "keywords": ["company c", "sales", "manufacturing"],
+        "specialization": "sales"
+      },
+      {
+        "id": 4,
+        "user-id": 3,
+        "company-name": "Company name d",
+        "email": "companyd@example.com",
+        "logo": "company-d.jpg",
+        "location": "Pasig City",
+        "salary": "44,000.00",
+        "job-title": "Job title 4",
+        "job-highlights": [
+          "Outstanding career growth & development opportunities",
+          "Competitive salary & work benefit packages",
+          "Passionate, energetic, & innovative work culture"
+        ],
+        "job-description": "The Teller is responsible for fast and accurate processing of over the counter customer transactions such as checks, deposits, loan payments, and withdrawals.",
+        "company-info": "As of April 26, 2021, PBB has 160 branches with most branches located in areas with high concentration of SME such as Caloocan, Malabon, Navotas, Valenzuela, and Quezon City as well as in highly urbanized cities outside Metro Manila such as Cebu, Davao, and Bacolod.",
+        "keywords": ["company d","tutorial", "tutor","teaching"],
+        "specialization": "Education"
+      }
+    ]
+  }
+  
