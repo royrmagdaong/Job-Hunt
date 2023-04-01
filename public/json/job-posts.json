@@ -3,12 +3,12 @@
       {
         "id": 1,
         "user-id": 3,
-        "company-name": "Company name a",
+        "company-name": "Philippine National Bank",
         "email": "companya@example.com",
         "logo": "company-a.jpg",
         "location": "Taguig City",
         "salary": "25,000.00",
-        "job-title": "Job title 1",
+        "job-title": "Email & Back Office Support • 100% Non-Voice",
         "job-highlights": [
           "Apply Onsite and Be Processed from Initial to Final Interview!",
           "HMO for you and your qualified dependents",
@@ -24,12 +24,12 @@
       {
         "id": 2,
         "user-id": 3,
-        "company-name": "Company name b",
+        "company-name": "Bank of the Philippine Islands",
         "email": "companyb@example.com",
         "logo": "company-b.jpg",
         "location": "Makati City",
         "salary": "55,000.00",
-        "job-title": "Job title 2",
+        "job-title": "DATA ENTRY AGENT (Back Office - Email/Voice) | No Work Exp",
         "job-highlights": [
           "Get to work with a small and intimate group of people.",
           "Work is more visible and employees get noticed faster.",
@@ -45,12 +45,12 @@
       {
         "id": 3,
         "user-id": 3,
-        "company-name": "Company name c",
+        "company-name": "International Trade Centre",
         "email": "companyc@example.com",
         "logo": "company-c.jpg",
         "location": "Quezon City",
         "salary": "45,000.00",
-        "job-title": "Job title 3",
+        "job-title": "Client Care Associate / Admin Assistant - No Weekends, No Nights, No Rush Hour!",
         "job-highlights": [
           "Outstanding career growth & development opportunities",
           "Competitive salary & work benefit packages",
@@ -64,12 +64,12 @@
       {
         "id": 4,
         "user-id": 3,
-        "company-name": "Company name d",
+        "company-name": "Cebuana Lhuillier",
         "email": "companyd@example.com",
         "logo": "company-d.jpg",
         "location": "Pasig City",
         "salary": "44,000.00",
-        "job-title": "Job title 4",
+        "job-title": "Accounts Payable Associate",
         "job-highlights": [
           "Outstanding career growth & development opportunities",
           "Competitive salary & work benefit packages",

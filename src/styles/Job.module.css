@@ -34,5 +34,5 @@
 .card:hover{
     border-left: var(--accent) 4px solid;
     cursor: pointer;
-    background-color: rgb(235, 248, 240);
+    background-color: #d8195911;
 }

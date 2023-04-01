@@ -2,7 +2,7 @@
     position: relative;
     inset: 0;
     background-color: var(--dark-secondary);
-    border: var(--border-color) 1px solid;
+    border-bottom: var(--border-color) 1px solid;
 }
 .navbar {
     max-width: var(--max-width);
