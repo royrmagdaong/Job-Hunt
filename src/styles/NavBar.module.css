@@ -34,6 +34,10 @@
 .about{
     margin-right: 22px;
 }
+.search-jobs, .about, .login {
+    text-decoration: none;
+    color: var(--text);
+}
 .search-jobs:hover, .login:hover, .about:hover{
     color: var(--primary);
     cursor: pointer;
