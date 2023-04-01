@@ -1,7 +1,7 @@
 .container{
     position: -webkit-sticky;
     position: sticky;
-    top: 88px;
+    top: 0;
     background-color: var(--dark-secondary);
     border: var(--border-color) 1px solid;
     border-radius: 4px;
