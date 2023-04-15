@@ -1,7 +1,7 @@
 import styles from '@/styles/ViewJob.module.css'
 import Image from 'next/image'
 
-const ViewJob = () => {
+const ViewJob = (props) => {
     return (
         <div className={styles['container']}>
             <div className={styles['logo']}>
@@ -12,7 +12,7 @@ const ViewJob = () => {
                     height={50}
                 />
             </div>
-            <div className={styles['job-title']}>Job Title</div>
+            <div className={styles['job-title']}>{props.job['job-title']}</div>
             <div className={styles['company-name']}>Company Name</div>
             <div className={styles['location']}>Location</div>
             <div className={styles['salary']}>25,000.00</div>

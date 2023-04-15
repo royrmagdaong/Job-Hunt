@@ -1,15 +1,19 @@
 import styles from '@/styles/ListJobs.module.css'
 import Job from "@/components/Job";
 
-const ListJobs = () => {
+
+const ListJobs = (props) => {
+    const viewJob = (job) => {
+        props.viewJob(job);
+    }
+    
     return (
         <div className={styles['container']}>
-            <Job></Job>
-            <Job></Job>
-            <Job></Job>
-            <Job></Job>
-            <Job></Job>
-            <Job></Job>
+            {
+               props.jobs.jobPosts.map(item=>(
+                <Job job={item} key={item.id} viewJob={viewJob}></Job>
+               ))
+            }
         </div>
     );
 }

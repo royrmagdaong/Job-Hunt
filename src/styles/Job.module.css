@@ -7,10 +7,15 @@
     padding: 20px;
     color: var(--text);
 }
+.selected-card{
+    border-left: var(--accent) 4px solid;
+}
 .job-title{
     color: var(--primary);
     font-size: 18px;
     margin: 16px 0 4px 0;
+    font-weight: 700;
+    text-transform: capitalize;
 }
 .company-name{
     font-size: 14px;
@@ -27,7 +32,7 @@
     margin-bottom: 4px;
 }
 .card:hover{
-    border: var(--primary) 4px solid;
+    border-left: var(--accent) 4px solid;
     cursor: pointer;
-    background-color: rgb(110, 110, 120);;
+    background-color: rgb(235, 248, 240);
 }
