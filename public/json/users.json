@@ -3,21 +3,21 @@
       {
         "id": 1,
         "name": "John Doe",
-        "email": "johndoe@example.com",
+        "email": "admin@gmail.com",
         "password": "password123",
         "role": "admin"
       },
       {
         "id": 2,
         "name": "Jane Smith",
-        "email": "janesmith@example.com",
+        "email": "applicant@gmail.com",
         "password": "password123",
         "role": "applicant"
       },
       {
         "id": 3,
         "name": "Bob Johnson",
-        "email": "bobjohnson@example.com",
+        "email": "recruiter@gmail.com",
         "password": "password123",
         "role": "recruiter"
       }
