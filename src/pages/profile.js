@@ -6,15 +6,25 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 // const userData = 
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation';
 
-const Login = () => {
-  const [userData, setUserData] = useState({})
+const Profile = () => {
+  const [userData, setUserData] = useState(null)
+
+  const { push } = useRouter();
 
   useEffect(()=>{
     const user = localStorage.getItem('user');
+    if(!user){
+        push('/login')
+    }
     setUserData(JSON.parse(user))
     console.log(JSON.parse(user))
   }, [])
+
+  if(!userData){
+    return <></>
+  }
 
   return (
     <>
@@ -28,12 +38,12 @@ const Login = () => {
         <NavBar></NavBar>
         <h1>Profile</h1>
         <div>
-            <p>Name: {userData.name}</p>
-            <p>Role: {userData.role}</p>
+            <p>Name: {userData?userData.name:''}</p>
+            <p>Role: {userData?userData.role:''}</p>
         </div>
       </main>
     </>
   )
 }
 
-export default Login
+export default Profile
