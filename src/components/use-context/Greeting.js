@@ -3,11 +3,11 @@ import UserContext from './UserContext';
 import GreetingChild from '@/components/use-context/GreetingChild';
 
 const Greeting = () => {
-  const person = useContext(UserContext);
+  // const person = useContext(UserContext);
 
   return (
     <div>
-        <h1>Hello, {person.name}!</h1>
+        {/* <h1>Hello, {person.name}!</h1> */}
         <GreetingChild />
     </div>
   );

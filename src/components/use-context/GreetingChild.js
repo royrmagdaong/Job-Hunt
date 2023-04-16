@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import UserContext from './UserContext';
+import GrandGrandChild from '@/components/use-context/GrandGrandChild';
+
 
 const GreetingChild = () => {
-  const person = useContext(UserContext);
 
-  return <h1>age, {person.age}</h1>;
+  return <GrandGrandChild></GrandGrandChild>;
 };
 
 export default GreetingChild;
