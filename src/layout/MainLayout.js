@@ -4,6 +4,7 @@ import ListJobs from "@/components/ListJobs";
 import ViewJob from "@/components/ViewJob";
 import styles from '@/styles/MainLayout.module.css'
 import { useState, useEffect } from 'react';
+import JobContext from '@/components/use-context/JobContext'
 
 const MainLayout = () => {
 
@@ -38,11 +39,13 @@ const MainLayout = () => {
             <NavBar></NavBar>
             <Filter></Filter>
             <div className={styles['main-content']}>
-                <ListJobs jobs={jobs} activeCard={activeCard} viewJob={viewJob}></ListJobs>
-                <ViewJob job={job}></ViewJob>
+                <JobContext.Provider value={jobs}>
+                    <ListJobs activeCard={activeCard} viewJob={viewJob}></ListJobs>
+                    <ViewJob job={job}></ViewJob>
+                </JobContext.Provider>
             </div>
         </div>
      );
 }
- 
+
 export default MainLayout;
