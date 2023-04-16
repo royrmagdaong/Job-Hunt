@@ -20,6 +20,13 @@
         "email": "bobjohnson@example.com",
         "password": "password123",
         "role": "recruiter"
+      },
+      {
+        "id": 3,
+        "name": "Roy Magdaong",
+        "email": "roy@gmail.com",
+        "password": "test123",
+        "role": "applicant"
       }
     ]
   }

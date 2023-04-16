@@ -1,5 +1,6 @@
 import styles from '@/styles/LoginForm.module.css'
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 const NavBar = () => {
     const [email, setEmail] = useState('')
@@ -8,6 +9,8 @@ const NavBar = () => {
     const [errors, setErrors] = useState([])
     const [isEmailValid, setIsEmailValid] = useState(true)
     const [incorrectPassword, setIncorrectPassword] = useState(false)
+
+    const { push } = useRouter();
 
     const roles = {
         admin: 'admin',
@@ -31,13 +34,13 @@ const NavBar = () => {
                     console.log('Email:', user.email)
                     console.log('Role:', user.role)
 
-                    if(user.role === roles.admin){
-                        console.log('ADMIN')
-                    }else if(user.role === roles.applicant){
-                        console.log('APPLICANT')
-                    }else{
-                        console.log('RECRUITER')
-                    }
+                    // Put the object into storage
+                    localStorage.setItem('user', JSON.stringify(user));
+                    
+                    // Retrieve the object from storage
+                    // var retrievedObject = localStorage.getItem('testObject');
+
+                    push('/profile')
                 }else{
                     console.log('Incorrect Password')
                     setErrors([...errors, 'Incorrect Password'])
@@ -46,7 +49,7 @@ const NavBar = () => {
                 setIsEmailValid(true)
                 return user.email === email
             }else{
-                setErrors([...errors, 'Email is not recognized'])
+                setErrors(['Email is not recognized'])
                 setIsEmailValid(false)
                 setIncorrectPassword(true)
             }
