@@ -16,6 +16,9 @@ const NavBar = () => {
                     <li>
                         <Link href="/login" className={styles["login"]}>Login</Link>
                     </li>
+                    {/* <li>
+                        <Link href="/test" className={styles["login"]}>test</Link>
+                    </li> */}
                 </ul>
             </nav>
         </div>

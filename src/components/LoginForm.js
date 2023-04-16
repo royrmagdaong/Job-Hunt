@@ -1,13 +1,92 @@
 import styles from '@/styles/LoginForm.module.css'
+import { useState, useEffect } from 'react';
 
 const NavBar = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [users, setUsers] = useState([])
+    const [errors, setErrors] = useState([])
+    const [isEmailValid, setIsEmailValid] = useState(true)
+    const [incorrectPassword, setIncorrectPassword] = useState(false)
+
+    const roles = {
+        admin: 'admin',
+        applicant: 'applicant',
+        recruiter: 'recruiter'
+    }
+
+
+    const login = () => {
+        console.log('Email:', email)
+        console.log('Password:', password)
+        
+        users.find(user=>{
+            if(user.email === email){
+                console.log('Email Exists')
+                if(user.password === password){
+                    console.log('Password is Correct')
+                    setIncorrectPassword(false)
+                    setErrors([])
+
+                    console.log('Email:', user.email)
+                    console.log('Role:', user.role)
+
+                    if(user.role === roles.admin){
+                        console.log('ADMIN')
+                    }else if(user.role === roles.applicant){
+                        console.log('APPLICANT')
+                    }else{
+                        console.log('RECRUITER')
+                    }
+                }else{
+                    console.log('Incorrect Password')
+                    setErrors([...errors, 'Incorrect Password'])
+                    setIncorrectPassword(true)
+                }
+                setIsEmailValid(true)
+                return user.email === email
+            }else{
+                setErrors([...errors, 'Email is not recognized'])
+                setIsEmailValid(false)
+                setIncorrectPassword(true)
+            }
+        })
+    }
+
+    const setEmailHandler = (e) => {
+        setEmail(e.target.value)
+        // console.log(email)
+    }
+
+    const setPasswordHandler = (e) => {
+        setPassword(e.target.value)  
+        // console.log(password)
+    }
+
+    useEffect(()=>{
+        const fetchUsers = async () => {
+            const res = await fetch('/json/users.json')
+            const jsonData = await res.json();
+            setUsers(jsonData.users);
+            console.log(jsonData.users)
+        }
+        fetchUsers();
+    }, []);
+
     return (
         <div className={styles['login-card']}>
             <h2 style={{textAlign: 'center', fontSize: '32px'}}>Login</h2>
             <div className={styles['login-fields']}>
-                <input className={styles['login-email']} type='email' name='email' placeholder='Email' />
-                <input className={styles['login-password']} type='password' name='password' placeholder='' />
-                <button className={styles['login-btn']}>Login</button>
+                <input className={ isEmailValid?styles['login-email']:styles['login-email-error']} type='email' name='email' placeholder='Email' onChange={setEmailHandler} defaultValue={email} />
+                <input className={ incorrectPassword?styles['login-password-error']:styles['login-password']} type='password' name='password' placeholder='' onChange={setPasswordHandler} defaultValue={password}/>
+                <button className={styles['login-btn']} onClick={login}>Login</button>
+                <div className={styles['error-messages']}>
+                    {
+                        errors.map((error)=>(
+                            <p key={error}>{error}</p>
+                        ))
+                    }
+                </div> 
             </div>
         </div>
     );

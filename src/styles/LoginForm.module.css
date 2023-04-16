@@ -19,6 +19,14 @@
     border: var(--text) 1px solid;
     padding: 0 12px;
 }
+.login-email-error, .login-password-error{
+    height: 44px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: rgb(222, 127, 127) 1px solid;
+    padding: 0 12px;
+}
 .login-email:focus, .login-password:focus{
     outline: none;
     border: var(--primary) 2px solid;
@@ -37,4 +45,7 @@
 .login-btn:hover{
     background-color: var(--accent);
     cursor: pointer;
+}
+.error-messages{
+    color: rgb(222, 127, 127);
 }
