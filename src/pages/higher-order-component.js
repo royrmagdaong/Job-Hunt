@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import MyComponent from '@/components/HOC/MyComponent'
+import Users from '@/components/HOC/Users'
 
 
 export default function About() {
@@ -13,6 +14,10 @@ export default function About() {
       </Head>
       <main>   
         <MyComponent />
+        <br></br>
+        <br></br>
+        <br></br>
+        <Users />
       </main>
     </>
   )

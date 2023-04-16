@@ -16,6 +16,10 @@ const WithData = (WrappedComponent, URL) => {
         .finally(() => setIsLoading(false));
     }, []);
 
+    const handleClick = () => {
+      console.log('Clicked!!')
+    }
+
     if (isLoading) {
       return <p>Loading...</p>;
     }
@@ -24,7 +28,7 @@ const WithData = (WrappedComponent, URL) => {
       return <p>Error: {error.message}</p>;
     }
 
-    return <WrappedComponent data={data} {...props} />;
+    return <WrappedComponent data={data} {...props} handleClick={handleClick}/>;
   };
 };
 

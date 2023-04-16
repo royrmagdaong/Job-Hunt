@@ -1,9 +1,9 @@
 import React from 'react';
 import WithData from './WithData';
 
-const URL = '/json/job-posts.json';
+const URL = '/json/users.json';
 
-const MyComponent = ({ data, handleClick }) => {
+const Users = ({ data, handleClick }) => {
     console.log(data)
 
     if (!data || data.length === 0) {
@@ -12,11 +12,10 @@ const MyComponent = ({ data, handleClick }) => {
     
     return (
         <ul>
-            {data.jobPosts.map(item => <li key={item.id}>{item['job-title']}</li>)}
+            {data.users.map(item => <li key={item.id}>{item['name']}</li>)}
             <button onClick={handleClick}>Click me</button>
         </ul>
     );
-
 }
 
-export default WithData(MyComponent, URL);
+export default WithData(Users, URL);
